@@ -30,41 +30,41 @@ required-features = ["tracing"]
 
 
 [dependencies]
-tracing = { version = "0.1.37", default-features = false }
+tracing = { version = "0.1.41", default-features = false }
 
-tokio = { version = "1.39.0", default-features = false, features = [
+tokio = { version = "1.48.0", default-features = false, features = [
     "signal",
     "rt",
     "macros",
     "time",
 ] }
-tokio-util = { version = "0.7.10", default-features = false }
+tokio-util = { version = "0.7.17", default-features = false }
 
-pin-project-lite = "0.2.13"
-thiserror = "2.0.3"
-miette = "7.0.0"
-atomic = "0.6.0"
-bytemuck = { version = "1.14.0", features = ["derive"] }
+pin-project-lite = "0.2.16"
+thiserror = "2.0.17"
+miette = "7.6.0"
+atomic = "0.6.1"
+bytemuck = { version = "1.24.0", features = ["derive"] }
 
 [dev-dependencies]
 # Error propagation
-anyhow = "1.0.75"
+anyhow = "1.0.100"
 eyre = "0.6.12"
-miette = { version = "7.2.0", features = ["fancy"] }
+miette = { version = "7.6.0", features = ["fancy"] }
 
 # Logging
-tracing-subscriber = "0.3.17"
-tracing-test = { version = "0.2.4", features = ["no-env-filter"] }
+tracing-subscriber = "0.3.20"
+tracing-test = { version = "0.2.5", features = ["no-env-filter"] }
 
 # Tokio
-tokio = { version = "1.39.0", features = ["full", "test-util"] }
+tokio = { version = "1.48.0", features = ["full", "test-util"] }
 
 # Hyper example
-hyper = { version = "1.0.1", features = ["server", "http1"] }
-hyper-util = { version = "0.1.1", features = ["tokio"] }
-tokio-util = { version = "0.7.10", default-features = false, features = ["rt"] }
-bytes = "1.5.0"
-http-body-util = "0.1.0"
+hyper = { version = "1.8.1", features = ["server", "http1"] }
+hyper-util = { version = "0.1.18", features = ["tokio"] }
+tokio-util = { version = "0.7.17", default-features = false, features = ["rt"] }
+bytes = "1.11.0"
+http-body-util = "0.1.3"
 
 futures = "0.3.31"
 
